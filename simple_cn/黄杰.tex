@@ -1,0 +1,193 @@
+\documentclass[a4paper,10pt]{article} % Default font size and paper size
+\usepackage{fontspec} % For loading fonts
+\usepackage{eurosym}
+\usepackage{fancyhdr}
+\usepackage[scheme=plain]{ctex}
+
+
+
+%% IF YOU WANT TO COMPILE THIS TEX LOCALLY, COMMENT THE FOLLOWING LINES IF THE FONTS ARE NOT INSTALLED
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont{Fontin-Regular.otf}[
+BoldFont       = Fontin-Bold.otf ,
+ItalicFont     = Fontin-Italic.otf ,
+SmallCapsFont  = Fontin-SmallCaps.otf ]
+%% UNTIL HERE 
+
+\usepackage{xunicode,xltxtra,url,parskip} % Formatting packages
+\usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colors
+% \usepackage[big]{layaureo} % Margin formatting of the A4 page, an alternative to layaureo can be \usepackage{fullpage}
+% \usepackage{fullpage}
+\usepackage[lmargin=1in, rmargin=1in, tmargin=1in, bmargin=0.5in]{geometry}
+% To reduce the height of the top margin uncomment: \addtolength{\voffset}{-1.3cm}
+\addtolength{\voffset}{-1.cm}
+\usepackage{hyperref} % Required for adding links	and customizing them
+\definecolor{linkcolour}{rgb}{0,0.2,0.6} % Link color
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour} % Set link colors throughout the document
+\usepackage{titlesec} % Used to customize the \section command
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
+\titlespacing{\section}{0pt}{3pt}{3pt} % Spacing around sections
+
+
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%	MAIN DOCUMENT - PLEASE ENTER YOUR DATA HERE
+%
+%	Some basic LaTeX commands: 
+%
+%	A '%' marks a comment that will not be shown in the final PDF
+%	If you want to remove content, just comment the line(s) with a leading '%'
+%
+%	When you open an environment with a '{' you need to close it with a corresponding '}'!
+%
+%	\textbf{TEXT} 						makes TEXT bold font
+%	\emph{TEXT} 						makes TEXT italics font
+%	\textsc{TEXT}						makes TEXT small caps font
+%	\small \footnotesize \Huge ...		defines font sizes
+%	\begin{tabular} ... \end{tabular} 	defines a table environment
+%										inside a table environment a '&' sign splits between columns 
+%										inside a table a '\\' marks the end of a row
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\rhead{\textsc{黄杰}}
+\cfoot{\thepage}
+\begin{document}
+\font\fb=''[cmr10]'' % Change the font of the \LaTeX command under the skills section
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+\par{\centering{\Huge \textsc{黄杰}}\bigskip\par} % Your name
+
+\section{个人信息}
+
+\begin{tabular}{rl}
+\textsc{性别:}                  	& 男 \\
+\textsc{出生年月:} 	        & 1993 年 2 月  \\
+\textsc{籍贯:} 					& 四川省简阳市  \\
+\textsc{电话:} 					& +86 199 3441 6201\\
+\textsc{邮箱:} 					& \href{mailto:jiehuang@stu.wzu.edu.cn}{jiehuang@stu.wzu.edu.cn} \\
+% \href{mailto:jackhuang.wz@gmail.com}{jackhuang.wz@gmail.com} \\
+\textsc{网站:}                   & \href{https://www.way2ml.com}{https://www.way2ml.com}\\
+\end{tabular}
+
+
+
+%----------------------------------------------------------------------------------------
+%	SCIENTIFIC EDUCATION
+%----------------------------------------------------------------------------------------
+\section{教育背景}
+
+%%BEGIN TABLE
+\begin{tabular}{r|l}	
+
+09/2018--06/2021 				    &研究生\ \textbf{温州大学}\ 数理学院\  \textbf{凝聚态物理和机器学习方向}\ 导师: \textbf{李士本\ 教授}\\
+                                    & 毕业论文: “\href{https://nbviewer.jupyter.org/github/HuangJiaLian/DataBase0/blob/master/uPic/2021_07_24_12_HuangJieBiYeDaBian.pdf}{机器学习在体相水氢键动力学和高分子链结构因子中的应用} \\
+
+\multicolumn{2}{c}{} \\	% this is just an empty row
+
+05/2018--12/2019            & 联合培养研究生 \textbf{北京航空航天大学}\ 国际软物质应用交叉研究中心\ 导师: \textbf{蒋滢\ 教授}  \\	
+& 研究方向: \textbf{高分子物理}和\textbf{机器学习}\\
+
+\multicolumn{2}{c}{} \\	% this is just an empty row
+
+09/2012--06/2016                    & 本科\ \textbf{西华师范大学}\ 数学与电子信息工程学院\ \textbf{电子信息工程}专业 \\
+					 & 毕业论文: “\href{https://nbviewer.jupyter.org/github/HuangJiaLian/DataBase0/blob/master/uPic/2021_07_24_13_CCD_translation_device.pdf}{一种基于树莓派的线性CCD扫描翻译装置}”
+\end{tabular}
+%%END TABLE
+
+\section{科研论文}  
+\begin{small}
+	\begin{enumerate}
+		\item \textbf{Jie Huang}, Gang Huang*, and Shiben Li*, A machine learning model to classify dynamic processes in liquid water,   \href{https://arxiv.org/abs/2104.07965}{arXiv:2104.07965}, 2021
+		
+		\item \textbf{Jie Huang}, Shiben Li*, Xinghua Zhang*, and Gang Huang, \href{https://aip.scitation.org/doi/10.1063/5.0022464}{Neural network model for structure factor of polymer systems},  \textbf{\emph{The Journal of Chemical Physics}} 153, 124902, 2020 (SCI II, Top)
+	\end{enumerate}
+\end{small}
+
+\section{工作经历}
+\begin{tabular}{r|p{11cm}}
+	05/2018--12/2019            & \textbf{联合培养研究生}\ \textbf{北航国际软物质应用交叉研究中心}  \\
+	& 1. 本科生课程“\textbf{C语言}”助教 \\
+	& 2. 软物质中心\textbf{Linux集群管理员}\\
+	& 3. 建立高分子化合物\textbf{结构因子的神经网络模型}\\ &\ \ \ 合作者: \textbf{北京交通大学\ 张兴华\ 教授, 中科院理论物理研究所\ 黄刚\ 博士} \\
+	& 4. 使用\textbf{机器学习}求解扩散方程和寻找高分子体系的相转变点\\
+	& 5. 使用\textbf{卷积神经网络}对角膜图像分类和圆锥形角膜检测\\ & \ \ \ 合作者: \textbf{温州医科大学\ 沈梅晓\ 教授}\\
+	\multicolumn{2}{c}{} \\	% this is just an empty row
+	09/2016--04/2018            & \textbf{软件工程师}  \textbf{上海鹰捷智能科技有限公司} \\                          & 1. 发票助手, 解决增值税发表输入困难的问题, 实现1秒闪电开票\\
+	& 2. QR码解码算法, 实现了一种基于平行坐标的QR码解码算法\\
+	
+	& 3. DM码图像处理算法, 实现了Data Matrix二维码的图像预处理算法\\
+\end{tabular}
+
+
+
+
+
+\section{荣誉获奖}
+\begin{tabular}{r|l}	
+2021                        & 温州大学\textbf{硕士研究生优秀毕业生} (比例: 1/65)\\
+         	     				& 温州大学第十届\textbf{大学生科技创新之星} (比例: 1/1176)\\
+\multicolumn{2}{c}{} \\	% this is just an empty row
+
+2020                        & 硕士研究生\textbf{国家奖学金}  (比例: 2/65) \\   	
+                            & 温州大学\textbf{研究生一等综合奖学金}  (比例: 2/22) \\
+\multicolumn{2}{c}{} \\	% this is just an empty row
+
+2018                     & 上海鹰捷智能科技有限公司\ \textbf{最具创造力员工奖}\\
+\multicolumn{2}{c}{} \\	% this is just an empty row
+
+2017                     & 上海鹰捷智能科技有限公司, \textbf{最佳团队奖} \\
+\multicolumn{2}{c}{} \\	% this is just an empty row
+
+2015                     & \textbf{全国大学生电子设计大赛} \textbf{二等奖} \\
+\end{tabular}
+
+
+\section{邀请报告}  
+\begin{small}
+	\begin{enumerate}
+		\item 2021\ 温州大学数理学院\ 全国科技人才活动日\ 研究生科研学术经验分享
+	\end{enumerate}
+\end{small}
+
+\section{证书}
+\begin{tabular}{r|l}	
+2018                        & \textbf{北京大学}\ \textbf{人工智能实践} MOOC课程满分证书\\
+\multicolumn{2}{c}{} \\	% this is just an empty row
+
+2016                        &  \textbf{University of Texas}\ \textbf{嵌入式系统}edX课程证书 \\   	
+\multicolumn{2}{c}{} \\	% this is just an empty row
+
+2015                     & 中国工业和信息化部人才交流中心 \textbf{单片机应用高级开发工程师} 证书\\
+\multicolumn{2}{c}{} \\	% this is just an empty row
+
+2014                     & 中国计算机等级考试\textbf{三级} (\textbf{嵌入式系统开发技术证书})\\
+							& 哈尔滨工业大学\ Python编程语言\ MOOC课程证书\\
+\multicolumn{2}{c}{} \\	% this is just an empty row
+
+2013                     & 中国计算机等级考试\textbf{二级} (\textbf{C语言})\\
+& \textbf{CET6} (513分)\\
+\multicolumn{2}{c}{} \\	% this is just an empty row
+\end{tabular}
+
+\section{计算机技能}
+\begin{small}
+Git, Linux, \textbf{Python}, C, Shell, \textbf{Tensorflow}, LAMMPS, CP2K
+\end{small}
+
+
+\section{个人优势}
+动手能力强, 善于吸收新事物, Linux运用自如, 精通Python和C, 擅长机器学习, 英语听说读写俱佳。会点吉他，喜欢\href{https://music.163.com/outchain/player?type=4&id=348244114}{唱歌}。
+
+
+
+% \vspace{\baselineskip}
+\begin{flushright} 
+Last updated: {\today}
+\end{flushright}
+
+\end{document}
